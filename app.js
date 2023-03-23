@@ -19,12 +19,7 @@ app.get('/', (req, res) => {
   });
 });
 
-// app.get('/hola-mundo', (req, res) => {
-//   res.send('Hola Mundo en su respectiva ruta');
-// });
-
 app.get('/generic', (req, res) => {
-  // res.sendFile(__dirname + '/public/generic.html');
   res.render('generic', {
     nombre: 'Ángel de la Mecha',
     titulo: 'Curso de Node'
@@ -32,7 +27,6 @@ app.get('/generic', (req, res) => {
 });
 
 app.get('/elements', (req, res) => {
-  // res.sendFile(__dirname + '/public/elements.html');
   res.render('elements', {
     nombre: 'Ángel de la Mecha',
     titulo: 'Curso de Node'
@@ -40,7 +34,7 @@ app.get('/elements', (req, res) => {
 });
 
 app.get('*', (req, res) => {
-  res.sendFile(__dirname + '/public/404.html');
+  res.sendFile(__dirname + '/public/index.html');
 });
 
 app.listen(port, () => {
